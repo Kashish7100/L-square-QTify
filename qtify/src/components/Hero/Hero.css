@@ -1,0 +1,40 @@
+/* .hero {
+    text-align: center;
+    padding: 40px;
+    background-color: #121212;
+  }
+  
+  .hero h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+  }
+  
+  .hero img {
+    width: 80px;
+    height: 80px;
+  }
+   */
+
+   /* Hero.css */
+.hero {
+    display: flex; /* Enable Flexbox */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Distribute space between text and image */
+    padding: 20px; /* Add some padding */
+    /* other styles you may have */
+  }
+  
+  /* .hero-content {
+    /* Styles for the text content container if needed */
+    /* text-align: left; Align text to the left */
+  /* } */ */
+  
+  .hero h1 {
+      margin-bottom: 10px; /* Space between the h1 elements */
+  }
+  
+  .hero-image {
+      max-width: 300px; /* Or whatever width you want for the image */
+      height: auto; /* Maintain aspect ratio */
+  }

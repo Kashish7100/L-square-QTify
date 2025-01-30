@@ -1,0 +1,23 @@
+.songs-section {
+    padding: 20px;
+  }
+  
+  .genre-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .genre-tabs button {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    background: #1E1E1E;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .genre-tabs .active {
+    background: #34C94B;
+  }
+  

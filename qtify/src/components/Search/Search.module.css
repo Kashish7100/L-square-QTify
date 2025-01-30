@@ -1,40 +1,71 @@
-.search {
-    padding: 14px 20px;
-    height: 100%;
-    border-radius: 8px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border: 1px solid var(--color-black);
-    width: 502px;
+/* Search.module.css */
+.searchContainer {
+    /* Styles for the overall container if needed */
+    width: 550px; /* or whatever width you want */
+    position: relative; /* Important for positioning the dropdown */
   }
   
   .wrapper {
     display: flex;
     align-items: stretch;
-    height: 48px;
+    height: 48px; /* Or adjust as needed */
+  }
+  
+  .search {
+    width: 100%; /* Take up available width within the wrapper */
+    background-color: #FFFFFF;
+    color: #121212;
+    border-radius: 8px;
+    border: 1px solid #FFFFFF; /* Keep your border style */
+    padding: 14px 20px;
   }
   
   .searchButton {
+    background-color: #34C94B;
+    color: #FFFFFF;
     border-radius: 0px 8px 8px 0px;
+    border: none; /* Remove default button border */
     padding: 14px 20px;
-    height: 100%;
-    border: 1px solid var(--color-black);
-    border-left: none;
     cursor: pointer;
-    height: 100%;
   }
   
+  .searchButton:hover {
+    background-color: #2a9d38; /* Darker green on hover */
+  }
+  
+  
   .listElement {
-    padding: 15px;
+    padding: 10px 15px; /* Reduced padding */
     display: flex;
+    align-items: center; /* Align items vertically */
     justify-content: space-between;
+    color: #FFFFFF;
   }
   
   .albumTitle {
     font-size: 16px;
+    color: #FFFFFF;
+    margin-right: 10px; /* Space between title and artists */
   }
   
   .albumArtists {
     font-size: 12px;
+    color: #FFFFFF;
+    white-space: nowrap; /* Prevent artists from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis (...) if text overflows */
   }
   
+  .MuiAutocomplete-listbox { /* Style the Autocomplete listbox */
+      background-color: var(--color-black); /* Set background color */
+      color: var(--color-white); /* Set text color */
+  }
+  
+  .MuiAutocomplete-option { /* Style the Autocomplete options */
+      color: var(--color-white); /* Set text color */
+  }
+  
+  .MuiAutocomplete-option:hover { /* Style the Autocomplete options on hover */
+      background-color: var(--color-primary); /* Set background color on hover */
+      color: var(--color-white); /* Set text color on hover */
+  }

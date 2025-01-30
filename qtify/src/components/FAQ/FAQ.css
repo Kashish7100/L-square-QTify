@@ -1,0 +1,27 @@
+.faq-section {
+    padding: 20px;
+  }
+  
+  .faq-item {
+    background: #1E1E1E;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  .faq-item button {
+    width: 100%;
+    background: none;
+    border: none;
+    color: white;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+  .faq-answer {
+    padding: 10px;
+    color: #34C94B;
+  }
+  
