@@ -1,0 +1,21 @@
+:root {
+    --button-bg-color: black;
+    --button-text-color: #34C94B; /* Replace with the actual green from Figma */
+  }
+  
+  .button {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .button:hover {
+    opacity: 0.8;
+  }
+  

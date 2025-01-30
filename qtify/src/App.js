@@ -19,6 +19,16 @@ function App() {
         </a>
       </header>
     </div>
+//     <div className="App">
+//     <Switch>
+//     <Route exact path="/" component={Products} />
+//     <Route path="/register" component={Register} />
+//     <Route path="/login" component={Login} />
+//     <Route path="/cart" component={Cart} />
+//     <Route path="/checkout" component={Checkout} />
+//     <Route path="/thanks" component={Thanks} />
+//   </Switch>
+// </div>
   );
 }
 
