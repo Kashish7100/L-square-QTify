@@ -1,7 +1,7 @@
 import React from "react";
 import "./CardComponent.css"; // Import the CSS file
 
-const CardComponent = ({ album }) => {
+const CardComponent = ({ album, isSongsSection }) => {
   console.log("Album Data:", album);
   return (
     <div className="card-container">
@@ -10,7 +10,7 @@ const CardComponent = ({ album }) => {
       
       <div className="card-content">
       <button className="button">
-            {album.follows} Follows
+      {isSongsSection ? `${album.likes} Likes` : `${album.follows} Follows`}
           </button>
       </div>
     </div>

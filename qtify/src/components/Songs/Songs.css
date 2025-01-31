@@ -1,23 +1,21 @@
 .songs-section {
-    padding: 20px;
-  }
-  
-  .genre-tabs {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
-  }
-  
-  .genre-tabs button {
-    padding: 8px 12px;
-    border: none;
-    cursor: pointer;
-    background: #1E1E1E;
-    color: white;
-    border-radius: 5px;
-  }
-  
-  .genre-tabs .active {
-    background: #34C94B;
-  }
-  
+  margin: 40px 0;
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Custom Material UI Tabs */
+.custom-tabs {
+  margin-bottom: 20px;
+}
+
+.custom-tab {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 16px;
+}

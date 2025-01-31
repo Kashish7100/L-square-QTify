@@ -1,0 +1,14 @@
+.carousel-container {
+    position: relative;
+    padding: 20px;
+  }
+  
+  .swiper {
+    overflow: hidden;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+  

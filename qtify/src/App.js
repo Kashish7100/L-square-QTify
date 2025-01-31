@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import AlbumSection from "./components/Albums/AlbumSection";
-import SongsSection from "./components/Songs/SongsSection";
+import SongsSection from "../src/components/CardComponent/Songs";
 import FAQ from "./components/FAQ/FAQ";
 import MusicPlayer from "./components/Player/MusicPlayer";
 import "./App.css";
@@ -30,8 +30,9 @@ function App() {
       <Container>
         <Section title="Top Albums" apiUrl="https://qtify-backend-labs.crio.do/albums/top" />
         <Section title="New Albums" apiUrl="https://qtify-backend-labs.crio.do/albums/new" />
+        {/* <SongsSection /> */}
       </Container>
-      <SongsSection songs={songs} />
+      {/* <SongsSection songs={songs} /> */}
       <FAQ />
       <MusicPlayer />
     </div>
