@@ -8,6 +8,7 @@ import MusicPlayer from "./components/Player/MusicPlayer";
 import "./App.css";
 import { Container } from "@mui/material";
 import Section from "../src/components/CardComponent/Section";
+import SongSection from "../src/components/CardComponent/SongsSection";
 
 
 const topAlbums = [
@@ -30,7 +31,7 @@ function App() {
       <Container>
         <Section title="Top Albums" apiUrl="https://qtify-backend-labs.crio.do/albums/top" />
         <Section title="New Albums" apiUrl="https://qtify-backend-labs.crio.do/albums/new" />
-        <Section title="Songs" apiUrl="https://qtify-backend-labs.crio.do/songs" />
+        <SongSection title="Songs" apiUrl="https://qtify-backend-labs.crio.do/songs" />
         {/* <SongsSection /> */}
       </Container>
       {/* <SongsSection songs={songs} /> */}
