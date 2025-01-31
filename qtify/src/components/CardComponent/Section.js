@@ -1,38 +1,38 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Box, Button, Typography } from "@mui/material";
 import CardComponent from "./CardComponent";
+import "./Section.css"; // Import the CSS file
 
 const Section = ({ title, apiUrl }) => {
   const [albums, setAlbums] = useState([]);
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [showMore, setShowMore] = useState(false);
 
-  // Fetch data from API
   useEffect(() => {
     axios.get(apiUrl)
-      .then(response => setAlbums(response.data))
-      .catch(error => console.error("Error fetching data:", error));
+      .then(response => {
+        console.log("API Response:", response.data);
+        setAlbums(response.data)})
+      .catch(error => console.error("Error fetching albums:", error));
   }, [apiUrl]);
 
-  return (
-    <Box sx={{ margin: "20px" }}>
-      {/* Section Title and Collapse Button */}
-      <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
-        <Typography variant="h5">{title}</Typography>
-        <Button onClick={() => setIsCollapsed(!isCollapsed)}>
-          {isCollapsed ? "Expand" : "Collapse"}
-        </Button>
-      </Box>
+  const toggleShowMore = () => {
+    setShowMore(!showMore);
+  };
 
-      {/* Grid Layout for Cards */}
-      {!isCollapsed && (
-        <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
-          {albums.map((album) => (
-            <CardComponent key={album.id} album={album} />
-          ))}
-        </Box>
-      )}
-    </Box>
+  return (
+    <div className="section">
+      <div className="section-header">
+        <h2 className="text">{title}</h2>
+        <h2 className="collapsetext" onClick={toggleShowMore}>
+          {showMore ? "Collapse" : "Show All"}
+        </h2>
+      </div>
+      <div className={`grid-container ${showMore ? "expanded" : ""}`}>
+        {albums.slice(0, showMore ? albums.length : 5).map(album => (
+          <CardComponent key={album.id} album={album} />
+        ))}
+      </div>
+    </div>
   );
 };
 

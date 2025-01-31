@@ -1,34 +1,22 @@
 import React from "react";
-import { Card, CardMedia, CardContent, Typography, Chip } from "@mui/material";
+import "./CardComponent.css"; // Import the CSS file
 
 const CardComponent = ({ album }) => {
+  console.log("Album Data:", album);
   return (
-    <Card sx={{ maxWidth: 250, borderRadius: 3, boxShadow: 3 }}>
-      {/* Album Image */}
-      <CardMedia
-        component="img"
-        height="140"
-        image={album.image} // Use API data here
-        alt={album.title}
-        sx={{ objectFit: "cover" }}
-      />
-
-      {/* Card Content */}
-      <CardContent>
-        {/* Album Name */}
-        <Typography variant="h6" gutterBottom>
-          {album.title}
-        </Typography>
-
-        {/* Follows Count */}
-        <Chip
-          label={`${album.follows} Follows`}
-          color="primary"
-          size="small"
-          sx={{ marginTop: 1 }}
-        />
-      </CardContent>
-    </Card>
+    <div className="card-container">
+    <div className="card">
+      <img src={album.image} alt={album.title} />
+      
+      <div className="card-content">
+      <button className="button">
+            {album.follows} Follows
+          </button>
+      </div>
+    </div>
+    <h3 className="card-title">{album.title}</h3>
+    {/* <h3>{album.title || "No Title Available"}</h3> */}
+    </div>
   );
 };
 
