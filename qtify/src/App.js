@@ -30,6 +30,7 @@ function App() {
       <Container>
         <Section title="Top Albums" apiUrl="https://qtify-backend-labs.crio.do/albums/top" />
         <Section title="New Albums" apiUrl="https://qtify-backend-labs.crio.do/albums/new" />
+        <Section title="Songs" apiUrl="https://qtify-backend-labs.crio.do/songs" />
         {/* <SongsSection /> */}
       </Container>
       {/* <SongsSection songs={songs} /> */}
